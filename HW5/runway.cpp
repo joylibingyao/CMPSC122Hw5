@@ -33,7 +33,7 @@ public:
                     if (abs(landingQueue.front()-i)<15 && !landingQueue.empty()) {//make landing request priority
                         landingQueue.pop();
                     }
-                    else if (landingQueue.front()<takeoffQueue.front() && !landingQueue.empty()) {
+                    else if (landingQueue.front()<takeoffQueue.front() && !landingQueue.empty()) {//complete request that is sent earlier
                         landingQueue.pop();
                     }
                     else if (landingQueue.front()>takeoffQueue.front() && !takeoffQueue.empty()){

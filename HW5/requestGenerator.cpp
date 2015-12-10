@@ -23,6 +23,7 @@ protected:
     int requestNumber=0;
     int time = 0;
     int requestTime[24];
+    int p[24]={};
     
     
     int requestTimeNumber = 0;
@@ -32,11 +33,11 @@ protected:
 public:
     RequestGenerator()
     {
-        
+//generate radom exponetional request interval
         default_random_engine generator;
         exponential_distribution<double> distribution(1);
         
-        int p[24]={};
+        
         
         for (int i=0; i<12000; ++i) {
             double number = distribution(generator);
@@ -49,6 +50,8 @@ public:
             
         }
 
+        
+//generate all requests
         for (int j=0; j<=120; j++)
         {
             if (j==0) {
@@ -79,6 +82,7 @@ public:
                 }
             }
         }
+        
     }
 
     
