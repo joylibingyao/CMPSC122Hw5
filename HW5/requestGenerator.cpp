@@ -6,7 +6,6 @@
 //  Copyright © 2015 CMPSC122. All rights reserved.
 //
 #include <iostream>
-#include "requestGenerator.hpp"
 #include <random>
 #include <string>
 #include <vector>
@@ -91,7 +90,7 @@ public:
     }
     
     void displayRequestTime(){
-        cout<<"Display request time: "<<endl;
+        cout<<"Display request time in minutes: "<<endl;
         int count = 1;
         cout<<"0"<<" ";
         while (count<24) {

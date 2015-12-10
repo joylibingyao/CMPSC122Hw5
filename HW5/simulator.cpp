@@ -6,7 +6,7 @@
 //  Copyright © 2015 CMPSC122. All rights reserved.
 //
 
-#include "simulator.hpp"
+
 #include <iostream>
 #include <queue>
 #include <string>
@@ -79,6 +79,16 @@ public:
 
     }
     
+    void summary(){
+        cout<<"SUMMARY: ----------------------------------------- "<<endl<<endl;
+        
+        displayLandingQueue();
+        displayTakeoffQueue();
+        displayRequest();
+        displayRequestTime();
+        cout<<"----------------------------------------------------"<<endl;
+    }
+    
     void displayRequestTime(){
         requestGenerator.displayRequestTime();
     }
@@ -91,17 +101,22 @@ public:
         cout<<endl<<"Size: "<<requests.size()<<endl<<endl;
     }
     void displayLandingQueue(){
-//        for(auto it = landingQueue.front(); it!=landingQueue.back();++it)
-//            std::cout << it << "\n";
-        cout<<"Original landingQueue: "<<landingQueue.size()<<endl;
-        cout<<"Final Landing Queue:   "<<finalLandingQueue.size()<<endl;
-    }
-    void displayTakeoffQueue(){
-//        for(auto it = takeoffQueue.front(); it!=takeoffQueue.back();++it)
-//            std::cout << it << "\n";
         
-        cout<<"Original takeoffQueue: "<<takeoffQueue.size()<<endl;
-        cout<<"Final takeoff Queue:   "<<finalTakeoffQueue.size()<<endl;
+        int completed =landingQueue.size()-finalLandingQueue.size();
+        cout<<"Original landingQueue:      "<<landingQueue.size()<<endl;
+        cout<<"Final Landing Queue:        "<<finalLandingQueue.size()<<endl;
+        cout<<"Completed landing request:  "<<completed<<endl;
+        cout<<"Spent "<<completed*15<<" minutes in landing Queue"<<endl<<endl;
     }
+    
+    void displayTakeoffQueue(){
+        
+        int completed =takeoffQueue.size()-finalTakeoffQueue.size();
+        cout<<"Original takeoffQueue:      "<<takeoffQueue.size()<<endl;
+        cout<<"Final takeoff Queue:        "<<finalTakeoffQueue.size()<<endl;
+        cout<<"Completed landing request:  "<<completed<<endl;
+        cout<<"Spent "<<completed*15<<" minutes in landing Queue"<<endl<<endl;
+    }
+    
     
 };
