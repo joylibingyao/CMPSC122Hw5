@@ -7,9 +7,21 @@
 //
 
 #include <iostream>
+#include <queue>
+#include <string>
+#include "simulator.cpp"
+
+using namespace std;
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Simulator simulator = *new Simulator();
+    
+    simulator.start();
+//    simulator.displayRequest();
+//    simulator.displayLandingQueue();
+//    simulator.displayTakeoffQueue();
+
     return 0;
 }
