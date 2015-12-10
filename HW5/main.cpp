@@ -19,9 +19,11 @@ int main(int argc, const char * argv[]) {
     Simulator simulator = *new Simulator();
     
     simulator.start();
-//    simulator.displayRequest();
-//    simulator.displayLandingQueue();
-//    simulator.displayTakeoffQueue();
+    simulator.displayRequest();
+    simulator.displayLandingQueue();
+    simulator.displayTakeoffQueue();
+    cout<<endl;
+    simulator.displayRequestTime();
 
     return 0;
 }

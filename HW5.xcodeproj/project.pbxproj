@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651CC6731C19323C00C8100F /* requestGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 651CC6711C19323C00C8100F /* requestGenerator.cpp */; };
+		651CC6761C193E2600C8100F /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 651CC6741C193E2600C8100F /* test.cpp */; };
+		651CC6791C19421D00C8100F /* runway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 651CC6771C19421D00C8100F /* runway.cpp */; };
 		6531AB521C17ECD1001748E4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6531AB511C17ECD1001748E4 /* main.cpp */; };
 		6531AB5A1C17EEA7001748E4 /* simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6531AB581C17EEA7001748E4 /* simulator.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		651CC6711C19323C00C8100F /* requestGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = requestGenerator.cpp; sourceTree = "<group>"; };
+		651CC6741C193E2600C8100F /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		651CC6771C19421D00C8100F /* runway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = runway.cpp; sourceTree = "<group>"; };
 		6531AB4E1C17ECD1001748E4 /* HW5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HW5; sourceTree = BUILT_PRODUCTS_DIR; };
 		6531AB511C17ECD1001748E4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6531AB581C17EEA7001748E4 /* simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simulator.cpp; sourceTree = "<group>"; };
@@ -61,6 +67,9 @@
 			children = (
 				6531AB511C17ECD1001748E4 /* main.cpp */,
 				6531AB581C17EEA7001748E4 /* simulator.cpp */,
+				651CC6711C19323C00C8100F /* requestGenerator.cpp */,
+				651CC6741C193E2600C8100F /* test.cpp */,
+				651CC6771C19421D00C8100F /* runway.cpp */,
 			);
 			path = HW5;
 			sourceTree = "<group>";
@@ -122,7 +131,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6531AB5A1C17EEA7001748E4 /* simulator.cpp in Sources */,
+				651CC6761C193E2600C8100F /* test.cpp in Sources */,
+				651CC6791C19421D00C8100F /* runway.cpp in Sources */,
 				6531AB521C17ECD1001748E4 /* main.cpp in Sources */,
+				651CC6731C19323C00C8100F /* requestGenerator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
