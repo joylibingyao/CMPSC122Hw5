@@ -48,7 +48,7 @@ public:
             requestTime[i]=time;
             
         }
-
+ 
         
 //generate all requests
         for (int j=0; j<=120; j++)
@@ -67,7 +67,7 @@ public:
             }
             
             else if (j == requestTime[requestTimeNumber]) {
-                
+   
                 requestTimeNumber++;
                 int ran;
                 ran = rand()%2;// generate number between 0 and 1

@@ -20,6 +20,8 @@ int main(int argc, const char * argv[]) {
     
     simulator.start();
     simulator.summary();
+    simulator.aveTimeLanding();
+    simulator.aveTimeTakeoff();
 
     return 0;
 }

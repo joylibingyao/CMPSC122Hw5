@@ -17,6 +17,7 @@ class Runway {
 protected:
     queue<int> landingQueue;
     queue<int> takeoffQueue;
+    bool avaliable = true;
     
 public:
     Runway(queue<int> newlandingQueue,queue<int> newtakeoffQueue)
@@ -24,30 +25,22 @@ public:
         landingQueue= newlandingQueue;
         takeoffQueue = newtakeoffQueue;
         
-        for (int n = 0; n<2; n++) {
-            for (int i=1; i<=120; i++)
-            {
-                
-                if (i==1||i%15 == 0) //complet request every 15 min
-                {
-                    if (abs(landingQueue.front()-i)<15 && !landingQueue.empty()) {//make landing request priority
-                        landingQueue.pop();
-                    }
-                    else if (landingQueue.front()<takeoffQueue.front() && !landingQueue.empty()) {//complete request that is sent earlier
-                        landingQueue.pop();
-                    }
-                    else if (landingQueue.front()>takeoffQueue.front() && !takeoffQueue.empty()){
-                        takeoffQueue.pop();
-                    }
-                    
-                    
-                }
-            }
-        }
     }
     
+
+    bool isAvalible(int i){
+        if (i%15 == 0) {
+//            cout<<"true"<<endl;
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
     
     queue<int> getLandingQueue(){
+//        cout<<landingQueue.size()<<"-----------------size";
         return landingQueue;
     }
     queue<int> getTakeoffQueue(){
